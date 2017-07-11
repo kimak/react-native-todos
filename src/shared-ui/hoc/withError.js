@@ -1,5 +1,5 @@
 import React from 'react';
-import Error from '../components/Error';
+import Error from '../Error';
 
 const withErrorMessage = Component => props => {
   if (props.error) {

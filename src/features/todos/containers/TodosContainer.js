@@ -1,14 +1,14 @@
 import { connect } from "react-redux";
 import { compose, lifecycle } from 'recompose';
 import Todos from "../components/Todos";
-import withError from "../hoc/withError";
-import withLoading from "../hoc/withLoading";
-import { fetchTodos } from "../actions/todosActions";
+import withError from "../../../shared-ui/hoc/withError";
+import withLoading from "../../../shared-ui/hoc/withLoading";
+import { fetchTodos } from "../../../redux/actions/todosActions";
 import {
   TOGGLE_TODO,
   ADD_TODO,
   SET_VISIBILITY_FILTER,
-} from "../actions/actionTypes";
+} from "../../../redux/actions/actionTypes";
 
 function mapDispatchToProps(dispatch) {
   return {
