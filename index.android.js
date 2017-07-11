@@ -4,22 +4,8 @@
  * @flow
  */
 
-import React, { Component } from 'react';
-import {
-  AppRegistry,
-  StyleSheet,
-  Text,
-  View
-} from 'react-native';
+import { AppRegistry } from "react-native";
 
-import App from './src/index';
+import App from "./src/index";
 
-export default class reactNativeTodos extends Component {
-  render() {
-    return (
-      <App />
-    );
-  }
-}
-
-AppRegistry.registerComponent('reactNativeTodos', () => reactNativeTodos);
+AppRegistry.registerComponent("reactNativeTodos", () => App);
