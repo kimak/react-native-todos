@@ -10,10 +10,13 @@ import {
   SET_VISIBILITY_FILTER,
 } from "../../../redux/actions/actionTypes";
 
-function mapDispatchToProps(dispatch) {
+function mapDispatchToProps(dispatch, ownProps) {
   return {
     init: () => {
       dispatch(fetchTodos());
+    },
+    goBack: () => {
+      ownProps.navigation.goBack();
     },
     onTodoClick: index => {
       dispatch({ type: TOGGLE_TODO, index });
@@ -27,12 +30,13 @@ function mapDispatchToProps(dispatch) {
   };
 }
 
-function mapStateToProps(state) {
+function mapStateToProps(state, ownProps) {
   return {
     todos: state.todos.results,
     filter: state.filter,
     isLoading: state.todos.isLoading,
-    error: state.todos.error
+    error: state.todos.error,
+    navParams: ownProps.navigation.state.params,
   };
 }
 

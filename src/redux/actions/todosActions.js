@@ -16,9 +16,11 @@ export function fetchTodos() {
       })
       .then(results => {
         dispatch({ type: FETCH_TODOS_SUCCESS, todos: results.todos });
-      })
-      .catch(error => {
+      },(error)=>{
         dispatch({ type: FETCH_TODOS_ERROR, error: { message: error.message }, });
-      });
+      })
+      /*.catch(error => {
+        dispatch({ type: FETCH_TODOS_ERROR, error: { message: error.message }, });
+      });*/
   };
 }

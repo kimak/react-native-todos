@@ -1,6 +1,6 @@
 import AppNavigator from "../../navigation/AppNavigator";
 
-const ROOT_PAGE = "Todos";
+const ROOT_PAGE = "Home";
 const initialState = AppNavigator.router.getStateForAction(
   AppNavigator.router.getActionForPathAndParams(ROOT_PAGE)
 );

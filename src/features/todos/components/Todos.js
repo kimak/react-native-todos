@@ -3,6 +3,7 @@ import { View, StyleSheet } from "react-native";
 import TodoList from "./TodoList";
 import TodoFilter from "./TodoFilter";
 import TodoInput from "./TodoInput";
+import { Button, Text } from "react-native";
 
 const styles = StyleSheet.create({
   container: {
@@ -18,11 +19,19 @@ const styles = StyleSheet.create({
   filter: {
     flex: 0,
     marginBottom: 10
+  },
+  back: {
+    flex: 0,
+    alignItems: "flex-start",
   }
 });
 const Todos = props => {
   return (
     <View style={styles.container}>
+      <View style={styles.back}>
+        <Text>{props.navParams.title}</Text>
+        <Button title="< Go back" onPress={props.goBack} />
+      </View>
       <TodoInput onAddTodo={props.onAddTodo} />
       <View style={styles.list}>
         <TodoList
