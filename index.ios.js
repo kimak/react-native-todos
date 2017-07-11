@@ -12,12 +12,12 @@ import {
   View
 } from 'react-native';
 
-import Todo from './src/containers/Todo';
+import App from './src/index';
 
 export default class reactNativeTodos extends Component {
   render() {
     return (
-      <Todo />
+      <App />
     );
   }
 }
